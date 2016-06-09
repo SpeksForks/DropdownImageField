@@ -80,11 +80,21 @@ class DropdownImageField extends DropdownField
 
     /**
      * Gets the source.
-     * 
+     *
      * @return object
      */
     public function getSource()
     {
         return $this->source;
+    }
+
+    /**
+     * Validate this field - quick and dirty hacked to get the faulty validation to not apply anymore temporary!
+     *
+     * @param Validator $validator
+     * @return bool
+     */
+    public function validate($validator) {
+        return true;
     }
 }
